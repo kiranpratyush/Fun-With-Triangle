@@ -18,7 +18,7 @@ btnSubmit.addEventListener("click",function(){
     length2 = inputLegth2.value;
     length3 = inputLegth3.value;
     let area = calArea(Number(length1),Number(length2),Number(length3));
-    if(area)
+    if(area && length1>0 && length2>0 && length3>0)
     {
         result.textContent = "Area is: "+ area;
     }
