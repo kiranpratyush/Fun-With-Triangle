@@ -11,5 +11,16 @@ btnSubmit.addEventListener("click",function(){
     length1 = inputLegth1.value;
     length2 = inputLegth2.value;
     let length3 = resultValue(Number(length1),Number(length2));
-    result.textContent = "Hypotenius is :"+length3;
+    if(Number(length1)<0 || Number(length2)<0)
+    {
+        result.textContent = "Triangle Lengths can not be negative";
+    }
+    if(length1==='' || length2 === '')
+    {
+        result.textContent="Enter all the lengths";
+    }
+    else if(Number(length1)>0 && Number(length2)>0){
+        result.textContent = "Hypotenius is :"+length3;
+    }
+    
 });
