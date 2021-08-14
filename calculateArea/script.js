@@ -18,7 +18,15 @@ btnSubmit.addEventListener("click",function(){
     length2 = inputLegth2.value;
     length3 = inputLegth3.value;
     let area = calArea(Number(length1),Number(length2),Number(length3));
-    if(area && length1>0 && length2>0 && length3>0)
+    if(length1 ===''|| length2 ===''||length3 ==='')
+    {
+        result.textContent = "Field should not be blank!"
+    }
+    else if(length1<0 || length2<0 ||length3<0)
+    {
+        result.textContent = "Length Should not be negative"
+    }
+    else if(area && length1>0 && length2>0 && length3>0)
     {
         result.textContent = "Area is: "+ area;
     }
